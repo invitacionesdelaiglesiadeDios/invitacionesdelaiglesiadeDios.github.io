@@ -1,17 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Fabian</title>
+  <title>Invitación de Fabian</title>  
   <style>
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
       background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .message {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
     }
 
     .card-container {
@@ -44,7 +53,7 @@
 
     .card-face.front {
       background-image: url('https://scontent.ftij2-1.fna.fbcdn.net/v/t39.30808-6/476623233_122097013892768474_4045388322464068288_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rmWhW-pq-BIQ7kNvgGAnjGS&_nc_oc=AdhyUiTxQbF5aprdIjchmPteG6MeOERSuoExgzpRoBJ445iXGLQ5s1WsFe3Gy-sLvnOPLE-gG06TTjYzLnAw59Hw&_nc_zt=23&_nc_ht=scontent.ftij2-1.fna&_nc_gid=ATvXPNKsoFa8G4tOApWEOIU&oh=00_AYCaI7D8DqGV4TMk5sxu-l5kafNeYMq0K6vHUJYV5IfiLg&oe=67AFF208'); 
-          background-size: cover;
+      background-size: cover;
       background-position: center;
     }
 
@@ -57,6 +66,9 @@
   </style>
 </head>
 <body>
+
+  <div class="message">¡Presiona la imagen!</div>
+  
   <div class="card-container">
     <div class="card" id="card">
       <div class="card-face front"></div>
