@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Fabian</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .card-container {
+      width: 300px;
+      height: 500px;
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+      cursor: pointer;
+    }
+
+    .card.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-face.front {
+      background-image: url('https://scontent.ftij2-1.fna.fbcdn.net/v/t39.30808-6/476623233_122097013892768474_4045388322464068288_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rmWhW-pq-BIQ7kNvgGAnjGS&_nc_oc=AdhyUiTxQbF5aprdIjchmPteG6MeOERSuoExgzpRoBJ445iXGLQ5s1WsFe3Gy-sLvnOPLE-gG06TTjYzLnAw59Hw&_nc_zt=23&_nc_ht=scontent.ftij2-1.fna&_nc_gid=ATvXPNKsoFa8G4tOApWEOIU&oh=00_AYCaI7D8DqGV4TMk5sxu-l5kafNeYMq0K6vHUJYV5IfiLg&oe=67AFF208'); 
+          background-size: cover;
+      background-position: center;
+    }
+
+    .card-face.back {
+      background-image: url('https://scontent.ftij2-1.fna.fbcdn.net/v/t39.30808-6/477888244_122097014168768474_4873570162133222728_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MBIsT74LiQsQ7kNvgFCz3sS&_nc_oc=AdjpqVq2JqyvymmXCruvdIiqkRwgWokj4_xjLtLougcH6RnKHyKLd4xMKbPaT6PgPGV5hSkJs-MAhTRzeqVycGcC&_nc_zt=23&_nc_ht=scontent.ftij2-1.fna&_nc_gid=AZOg1emNCMMPtRPnI5RZvfJ&oh=00_AYC3jK7yf_ldnGgnHE4ipbT9jWd6zdgrF4t3vWOrdt0XmA&oe=67B00154'); 
+      background-size: cover;
+      background-position: center;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card" id="card">
+      <div class="card-face front"></div>
+      <div class="card-face back"></div>
+    </div>
+  </div>
+
+  <script>
+    const card = document.getElementById('card');
+    card.addEventListener('click', () => {
+      card.classList.toggle('is-flipped');
+    });
+  </script>
+</body>
+</html>
